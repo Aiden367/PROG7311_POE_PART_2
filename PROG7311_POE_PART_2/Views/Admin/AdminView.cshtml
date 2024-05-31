@@ -1,0 +1,47 @@
+﻿@using PROG7311_POE_PART_2.ViewModel;
+@model AssignRoleViewModel
+@{
+    Layout = "~/Views/Shared/_Layout_NewNavBar.cshtml";
+}
+<head>
+    <link href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"> </script>
+    <link rel="stylesheet" type="text/css" href="~/css/DisplayFarmersStyleSheet.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        
+        .color-block-display-users {
+            margin-top: 50px;
+            margin-bottom: 200px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .farmerNameComboBox {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body style="background-color:white">
+<h2>Assign Role</h2>
+<form id="saveUserRoleForm" asp-controller="Admin" asp-action="AssignRole" method="post">
+    <div class="color-block-display-users">
+        <label for="userIDInput">User ID</label>
+        <input asp-for="Users.Usernames" class="form-control" type="text"  id="userIDInput" />
+    
+    <div class="form-group">
+        <label for="roleIDInput">Role ID</label>
+        <input asp-for="UserRoles.Role.RoleName" class="form-control" type="text"  id="roleIDInput" />
+    </div>
+    <button type="submit" class="btn btn-primary">Assign Role</button>
+    </div>
+</form>
+</body>
+<!----------Script that refreshes the page once the user has add a module--------------->

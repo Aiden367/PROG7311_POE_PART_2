@@ -1,0 +1,51 @@
+﻿body {
+}
+
+.product-heading {
+    position: relative;
+    top: 40px;
+    bottom: 200px;
+    font-size: 20px;
+}
+
+
+.table-heading {
+    position: relative;
+    top: 100px;
+    bottom: 200px;
+    font-size: 20px;
+}
+
+.add-product-button {
+    background-color: #0074d9;
+    position: relative;
+    top: 30px;
+    bottom: 10px;
+    right: 50px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 10px;
+}
+
+
+
+.add-product-button:hover {
+  background-color: #0056b3;
+  }
+
+.show-modules-button {
+    background-color: #0074d9;
+    position: relative;
+    top: 1px;
+    bottom: 10px;
+    right: 5px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 10px;
+}

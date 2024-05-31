@@ -1,0 +1,143 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_NewNavBar.cshtml";
+}
+
+<h1>Community Forums</h1>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-jcKb59U0N8pI5MLKVNfiQQBpO7rGj5KsdfYLuSyY9d0eTTn0xcsnDx3+nv8R+N11" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/css/TextBoxStyleSheet.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/AddCourseDetailsStyleSheet.css" />
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <title>Community Forums</title>
+    <style>
+        .forum-category {
+            margin-bottom: 30px;
+        }
+
+            .forum-category .card-header {
+                background-color: #007bff;
+                color: white;
+                font-size: 1.5rem;
+            }
+
+            .forum-category .list-group-item {
+                font-size: 1.2rem;
+                cursor: pointer;
+            }
+
+                .forum-category .list-group-item:hover {
+                    background-color: #f8f9fa;
+                }
+    </style>
+</head>
+
+<body style="background-color:white">
+    <div class="container mt-5">
+        <!-- Category 1 -->
+        <div class="forum-category">
+            <div class="card">
+                <div class="card-header">
+                    Sustainable Farming Practices
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="1">Organic Farming Techniques</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="2">Permaculture Design</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="3">Soil Health and Management</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="4">Crop Rotation Strategies</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="forum-category">
+            <div class="card">
+                <div class="card-header">
+                    Renewable Energy for Farms
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="5">Solar Power Systems</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="6">Wind Turbines</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="7">Biogas Plants</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="8">Hydroelectric Solutions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="forum-category">
+            <div class="card">
+                <div class="card-header">
+                    Modern Farming Technologies
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="9">Hydroponics</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="10">Aquaponics</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="11">Precision Agriculture</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="12">Drone Technology</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="forum-category">
+            <div class="card">
+                <div class="card-header">
+                    Community and Support
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="13">Local Farmer Networks</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="14">Farming Events and Meetups</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="15">Mental Health and Wellbeing</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="forum-link" data-topic="16">Government Policies and Support</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".forum-link").click(function (e) {
+                e.preventDefault();
+                var topicId = $(this).data("topic");
+                console.log("Topic ID: " + topicId); // You can do whatever you want with the topic ID here
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgQWWKfQrc/GyZ9l5m5Qm9F5MFyYDsR57vw/Il24PLdC5m9QpF5" crossorigin="anonymous"></script>
+</body>
+
+

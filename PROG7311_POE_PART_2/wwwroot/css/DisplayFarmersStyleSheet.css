@@ -1,0 +1,17 @@
+﻿body {
+}
+
+.show-modules-button {
+    background-color: #0074d9;
+    position: relative;
+    top: 1px;
+    bottom: 10px;
+    right: 5px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 10px;
+}
+

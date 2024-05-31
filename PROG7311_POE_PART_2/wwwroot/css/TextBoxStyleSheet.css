@@ -1,0 +1,31 @@
+﻿body 
+{
+}
+
+/*Design of a block to store the text boxes*/
+.block-text {
+    padding: 20px;
+    color: white;
+}
+
+/*design of textbox*/
+.block-input {
+    width: 200px;
+    margin: 10px;
+    padding: 5px;
+    outline-color: grey;
+    border-radius: 20px;
+}
+
+/* Makes text inline*/
+.text-next-to-input {
+    margin-right: 10px;
+}
+
+.combobox-style {
+    width: 200px;
+    margin: 10px;
+    padding: 5px;
+    outline-color: grey;
+    border-radius: 20px;
+}

@@ -1,0 +1,46 @@
+﻿body {
+}
+
+.Register-heading {
+    position: relative;
+    top: 40px;
+    bottom: 200px;
+    font-size: 20px;
+}
+
+
+.register-button {
+    background-color: #0074d9;
+    position: relative;
+    top: 30px;
+    bottom: 10px;
+    color: #fff;
+    width: 172px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 10px;
+}
+
+    .register-button:hover {
+        background-color: #0056b3;
+    }
+
+
+.swap-to-login-button {
+    background-color: #0074d9;
+    position: relative;
+    top: 40px;
+    bottom: 20px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 10px;
+}
+
+.swap-to-login-button {
+    background-color: #0056b3;
+}

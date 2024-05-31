@@ -1,0 +1,165 @@
+﻿@using System.Security.Claims;
+@using PROG7311_POE_PART_2.ViewModel;
+@model AddProductViewModel
+@{
+    Layout = "~/Views/Shared/_Layout_NewNavBar.cshtml";
+   
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Farming Products</title>
+    <link rel="stylesheet" type="text/css" href="~/css/TextBoxStyleSheet.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/AddFarmingProductsStyleSheet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .color-block {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .product-heading, .table-heading {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .block-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .add-product-button {
+            background-color: #0074d9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            border-radius: 10px;
+        }
+
+            .add-product-button:hover {
+                background-color: #0056b3;
+            }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body style="background-color:white">
+    <div class="container">
+        <h1 class="mt-5">Add Farming Products</h1>
+      
+        <form id="saveProductDetailsForm" asp-controller="AddingFarmingProducts" asp-action="AddingProduct" method="post">
+            <div class="color-block">
+                
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="productNameInput">Product Name</label>
+                        <input asp-for="AddProductModel.ProductName" class="form-control block-input" type="text" placeholder="Eg Tractor" id="productNameInput" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="productCategoryInput">Product Category</label>
+                        <input asp-for="AddProductModel.ProductCategory" class="form-control block-input" type="text" placeholder="Eg Vehicle" id="productCategoryInput" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="productionDateInput">Production Date</label>
+                        <input asp-for="AddProductModel.DateProductListed" class="form-control block-input" type="date" id="productionDateInput" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="productDescriptionInput">Product Description</label>
+                        <input asp-for="AddProductModel.ProductDescription" class="form-control block-input" type="text" placeholder="Eg Green" id="productDescriptionInput" />
+                    </div>
+                </div>
+                <div class="form-group text-right">
+                    <button class="btn btn-primary add-product-button" type="button" onclick="addProduct()">Add Product</button>
+                </div>
+            </div>
+        </form>
+
+        <form id="populateProductsTableForm" asp-controller="AddingFarmingProducts" asp-action="PopulateFarmerDetailsTableAddProduct">
+            <div class="color-block mt-5">
+                <h2 class="table-heading">Display Products</h2>
+                <div class="form-group text-right">
+                    <button class="btn btn-primary add-product-button mb-3" asp-action="PopulateFarmerDetailsTableAddProduct" asp-controller="AddingFarmingProducts" type="submit" id="showModulesButton">Show Products</button>
+                </div>
+                <div class="table-responsive">
+                    <table id="tblModules" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Farmer Name</th>
+                                <th>Product Name</th>
+                                <th>Category</th>
+                                <th>Date of Created listing</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.ProductsListProductModel != null)
+                            {
+                                @foreach (var product in Model.ProductsListProductModel)
+                                {
+                                    <tr>
+                                        <td>@product.FarmerName</td>
+                                        <td>@product.ProductName</td>
+                                        <td>@product.ProductCategory</td>
+                                        <td>@product.DateProductListed</td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="4" class="text-center">No data available</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function addProduct() {
+            $.ajax({
+                url: '/AddingFarmingProducts/AddingProduct',
+                type: 'POST',
+                data: $('#saveProductDetailsForm').serialize(),
+                success: function (data) {
+                    if (data.success) {
+                        location.reload(true);
+                    } else {
+                        console.error('Error adding product.');
+                    }
+                },
+                error: function () {
+                    console.error('Error adding product.');
+                }
+            });
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#tblModules').DataTable();
+        });
+    </script>
+</body>
+</html>

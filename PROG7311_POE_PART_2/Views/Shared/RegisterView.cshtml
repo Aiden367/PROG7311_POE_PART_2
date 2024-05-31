@@ -1,0 +1,93 @@
+﻿@using PROG7311_POE_PART_2.ViewModel;
+@model UserDetailsAndRoleViewModel
+@{
+    Layout = "~/Views/Shared/_Layout_NoNav.cshtml";
+}
+<h
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/TextBoxStyleSheet.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/RegisterStyleSheet.css" />
+    <title>Register</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Set a lower z-index to place it behind the content */
+        }
+
+        #myVideo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .color-block-register {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .heading {
+            font-size: 28px;
+            color: white;
+        }
+
+        .logo-image {
+            width: 50px; /* Set your desired width */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px; /* Adjust margin as needed */
+        }
+    </style>
+</head>
+<form asp-action="RegisterView" method="post">
+    <body style="background-color:white">
+
+        <div id="video-container">
+            <video autoplay muted loop id="myVideo">
+                <source src="~/videos/other-background-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="color-block-register">
+          
+            <div class="heading mb-4">Register</div>
+
+            <div class="form-group">
+                <label for="usernameInput">Username</label>
+                <input asp-for="UserDetails.Usernames" class="form-control block-input" type="text" placeholder="Eg FriedEgg123" id="usernameInput" />
+            </div>
+
+            <div class="form-group">
+                <label for="passwordInput">Password</label>
+                <input asp-for="UserDetails.Passwords" class="form-control block-input" type="password" id="passwordInput" placeholder="Eg Egg123#" />
+            </div>
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit">Register</button>
+            </div>
+
+            <div class="form-group">
+                <a asp-controller="Register" asp-action="LoginView" class="btn btn-link btn-block">Existing Account</a>
+            </div>
+        </div>
+    </body>
+</form>
