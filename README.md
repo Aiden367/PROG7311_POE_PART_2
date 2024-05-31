@@ -22,11 +22,30 @@ This is a web application that is a farming hub that allows for all farmers to a
 #### Technologies
 
 - Microsoft Visual Studio 2022
-- Azure Database
+- Microsoft Azure
 
 [Back To The Top](#read-me-template)
 
 ---
+
+## Login Details for Admin And Employee Accounts
+
+### Admin 
+- Username: NewAdmin
+- Password: 123
+- 
+### Employee
+- Username: Employee
+- Password: 123
+
+### User
+- Username: NewUser
+- Password: 123
+
+### Farmer
+- Username: Farmer
+- Password: 123
+  
 ## Roles 
 
 ### Admin
@@ -35,7 +54,7 @@ This is a web application that is a farming hub that allows for all farmers to a
 ### User
 - Only has access to Farming Forums,Farming hub,and education pages
 - Default role given to a newly created user and once approved will either be given the role of employee or farmer depending on the situation.
-- 
+  
 ### Employee
 - Has Access to all pages excpet for the admin controls page
 - Employee role is given to a user by the admin once they have been approved
