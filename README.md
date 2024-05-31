@@ -11,7 +11,9 @@ You're sections headers will be used to reference location of destination.
 - [How To Use](#how-to-use)
 - [License](#license)
 ---
-
+#NOTES
+- WHEN A NEW USER IS CREATED MAKE SURE TO LOGIN TO THE EMPLOYEE ACCOUNT TO ASSIGN THE NEW USER TO THE ROLE OF FARMER SO THAT YOU ARE ABLE TO ADD PRODUCTS
+- 
 ## Description
 
 This is a web application that is a farming hub that allows for all farmers to add products,discuss new renewable farming techniques, and to educate themselves.
