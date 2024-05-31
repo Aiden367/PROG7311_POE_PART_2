@@ -27,7 +27,7 @@ This is a web application that is a farming hub that allows for all farmers to a
 
 ---
 
-## Login Details for Admin And Employee Accounts
+## Login Details for each account type
 
 ### Admin 
 - Username: NewAdmin
