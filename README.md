@@ -9,10 +9,7 @@ You're sections headers will be used to reference location of destination.
 
 - [Description](#description)
 - [How To Use](#how-to-use)
-- [References](#references)
 - [License](#license)
-- [Author Info](#author-info)
-
 ---
 
 ## Description
@@ -105,20 +102,6 @@ This is a web application that is a farming hub that allows for all farmers to a
 - The admin must enter in the UserID and then the ID of the Role they wish to assign to a user.
 - Once they have completed this the admin must then click the assign role button and this will asign the role to the user.
   
-#### Installation
-
-
-
-#### API Reference
-
-```html
-    <p>dummy code</p>
-```
-[Back To The Top](#read-me-template)
-
----
-
-## References
 [Back To The Top](#read-me-template)
 
 ---
@@ -151,9 +134,6 @@ SOFTWARE.
 
 ---
 
-## Author Info
 
-- Twitter - [@jamesqquick](https://twitter.com/jamesqquick)
-- Website - [James Q Quick](https://jamesqquick.com)
 
 [Back To The Top](#read-me-template)
