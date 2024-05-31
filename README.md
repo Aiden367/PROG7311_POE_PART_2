@@ -13,7 +13,7 @@ You're sections headers will be used to reference location of destination.
 ---
 #NOTES
 - WHEN A NEW USER IS CREATED MAKE SURE TO LOGIN TO THE EMPLOYEE ACCOUNT TO ASSIGN THE NEW USER TO THE ROLE OF FARMER SO THAT YOU ARE ABLE TO ADD PRODUCTS
-- 
+- THE EDUCATIONAL RESOURCES AND FARMING HUB BLOCKS DO NOT HAVE IMAGES BECAUSE IN THE PRODUCTION MODEL OF THE APP WILL HAVE THUMBNAILS TO VIDEOS.
 ## Description
 
 This is a web application that is a farming hub that allows for all farmers to add products,discuss new renewable farming techniques, and to educate themselves.
